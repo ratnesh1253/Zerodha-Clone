@@ -31,7 +31,7 @@ function TopBar() {
 
   useEffect(() => {
     const updateNiftyPrice = () => {
-      if (marketOpen) {
+      if (!marketOpen) {
         const change = (Math.random() - 0.5) * 100;
         setNifty((prevNifty) => parseFloat((prevNifty + change).toFixed(2)));
       }
@@ -42,7 +42,7 @@ function TopBar() {
 
   useEffect(() => {
     const updateSensexPrice = () => {
-      if (marketOpen) {
+      if (!marketOpen) {
         const change = (Math.random() - 0.5) * 200;
         setSensex((prevSensex) => parseFloat((prevSensex + change).toFixed(2)));
       }

@@ -25,7 +25,7 @@ function HomePage() {
       }
 
       const { data } = await axios.post(
-        "http://localhost:8080",
+        "https://zerodha-server.onrender.com",
         {},
         { withCredentials: true }
       );
