@@ -1,0 +1,152 @@
+
+created two folders
+1. frontend
+2. backend
+
+first we have set react app in frontend
+npx create-react-app frontend
+
+created basic empty structure of landing page in landing_page folder ->
+ex - about , pricing, product, signup, support, footer, navbaar, openaccuont
+
+then created subfolders in these files
+based on section there in each page of landing page
+
+--------------------------------------------------------------------------------------
+
+designing Homepage using bootstrap ->
+
+include via CDN in public/index.html
+
+using fontawesome icons
+
+---------------------------------------------------------------------------------------
+
+setting up react-router
+
+react-router =>
+
+this package is used to enable the links in navbaar
+to switch to other part of application
+
+npm i react-router-dom
+
+we'll set up it in index.js
+
+import BrowserRouter Routes Route from react-router-dom
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+
+
+BrowserRouter is a container or wrapper
+
+all links will be defined in Routes
+
+and inside it
+
+we will write Route
+
+and the component which is to be open after clicking on links
+should be written inside route
+in path attribute
+
+and which component should open 
+is written in element attribute
+in HTML tag format
+
+ex.
+
+<BrowserRouter>
+    <Routes>
+      <Route path="/" element={<HomePage />}></Route>
+    </Routes>
+</BrowserRouter>
+
+
+in navbar.jsx
+
+where we have links in navbar
+use link tag instead of anchore tag
+
+for this
+import Link from react-router-dom
+import { Link } from "react-router-dom";
+
+
+and instead of href attribute
+add 'to' attribute
+then specify link inside it
+ex.
+<Link class="nav-link active" to="/pricing">Pricing</Link>
+
+===================================================================
+
+Dashboard and DB
+
+creating new react app for Dashboard
+
+in menu.jsx
+
+using useState
+
+added material ui icons for wishlist hover effect
+npm install @mui/icons-material @mui/material @emotion/styled @emotion/react
+
+import { Tooltip, Grow } from "@mui/material";
+
+ratneshkshirsagar1253
+x1LRxu6T1jtCUKEg
+
+mongodb+srv://ratneshkshirsagar1253:<db_password>@zerodhacolnecluster.gkxau.mongodb.net/?retryWrites=true&w=majority&appName=zerodhaColneCluster
+
+=======================================================================
+
+for authentication and autherization =>
+
+we follow a blogpost from freeCodecamp(A)
+
+https://www.freecodecamp.org/news/how-to-secure-your-mern-stack-application/
+
+first user
+{
+  "email" : "testing@gmail.com",
+  "password" : "testpass",
+  "username" : "testuser"
+}
+
+=======================================================================================
+
+chart.js
+
+bargraph
+charts
+
+graph for holdings and watchlist
+
+open source 
+
+react specific package => react-chartjs-2
+
+npm i react-chartjs-2 chart.js
+
+==========================================
+
+testing => Jest
+
+first level testing -> for small and individual components
+
+to ensure developed code meets requirements
+
+automation testing -> we write scripts so browser run in backend 
+and ensure all thing working properly
+
+jest-dom library is preinstalled with react which will be used in testing
+
+we will write test case for hero component in home folder of frontend components
+
+create a test folder in src 
+
+create file "componente_name.test.js"
+
+ex. -> Hero.test.js
+
+npm test -> to run test
