@@ -4,6 +4,12 @@ A **MERN stack** project that replicates the basic functionality and design of t
 
 ---
 
+## Live Demo
+
+- **Visit**: [Live Link](https://zerodhafront.vercel.app/)
+
+---
+
 ## Features
 
 - **Landing Page**: Includes sections such as About, Pricing, Products, Signup, Support, Footer, and Navbar.
